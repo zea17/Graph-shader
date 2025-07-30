@@ -37,3 +37,9 @@
 # VS Code
 .vscode/
 .vs/
+# Additional Unity ignores
+*.unitypackage
+*.a
+*.mdb
+*.rsp
+*.bak
