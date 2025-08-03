@@ -8,7 +8,7 @@ public class Graph : MonoBehaviour
     [SerializeField, Range(10, 100)]
     int resolution = 10;
 
-    [SerializeField, Range(0, 1)]
+    [SerializeField, Range(0, 2)]
     int function;
 
     Transform[] points;
@@ -41,9 +41,13 @@ public class Graph : MonoBehaviour
             {
                 position.y = FunctionLibrary.Wave(position.x, time);
             }
-            else
+            else if (function == 1)
             {
                 position.y = FunctionLibrary.MultiWave(position.x, time);
+            }
+            else
+            {
+                position.y = FunctionLibrary.Ripple(position.x, time);
             }
 
             point.localPosition = position;
