@@ -16,7 +16,7 @@ public static class FunctionLibrary
 
     public static float Wave(float x, float z, float t)
     {
-        return Sin(PI * (x + t));
+        return Sin(PI * (x + z + t));
     }
 
     public static float MultiWave(float x, float z, float t)
